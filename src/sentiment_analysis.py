@@ -486,7 +486,6 @@ def train_sentiment_analysis(args=None):
 
 
 def predict_from_korean_form(tokenizer, ce_model, pc_model, data):
-
     ce_model.to(device)
     ce_model.eval()
     count = 0
@@ -670,8 +669,10 @@ if __name__ == '__main__':
     args = parse_args()
 
     if args.do_train:
+        breakpoint()
+        # import pdb;pdb.set_trace()
         train_sentiment_analysis(args)
-    elif args.do_demo:
-        demo_sentiment_analysis(args)
-    elif args.do_test:
-        test_sentiment_analysis(args)
+    # elif args.do_demo:
+    #     demo_sentiment_analysis(args)
+    # elif args.do_test:
+    #     test_sentiment_analysis(args)
